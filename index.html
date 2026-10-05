@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diógenes Miaja Pérez — Backend, IA & Mobile Flutter Developer</title>
+  <meta name="description" content="Portafolio profesional de Diógenes Miaja Pérez: Ingeniero de Software especializado en Python, FastAPI, Flutter/Dart, PostgreSQL RLS e IA Generativa. Matrícula de Honor en DAW.">
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/jpg" href="assets/diogenes-profile.jpg">
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container header-layout">
+      <a href="#hero" class="brand-box">
+        <img src="assets/diogenes-profile.jpg" alt="Diógenes Miaja" class="brand-icon">
+        <div>
+          <div class="brand-title">DIÓGENES MIAJA</div>
+          <div class="brand-subtitle">Backend, IA & Mobile Engineer</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#cosmograph">Cosmograph Engine</a></li>
+          <li><a href="#neurodeck">NeuroDeck</a></li>
+          <li><a href="#trayectoria">Trayectoria</a></li>
+          <li><a href="#stack">Habilidades</a></li>
+          <li><a href="#contacto">Contacto & CV</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <button type="button" class="btn-master btn-sm" onclick="openOfferEmail('Diógenes Miaja', 'dmiaper@hotmail.com')">
+          <span>💼 Proponer Oferta</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <div>
+          <div class="hero-eyebrow">
+            <span class="badge-pill">
+              <span class="status-dot-green"></span>
+              <span>Disponible para Contratación Inmediata</span>
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Diógenes Miaja. <br>
+            <span class="text-gradient-master">Arquitectura Backend, IA & Flutter.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Desarrollador de software especializado en <strong>Python (FastAPI)</strong>, desarrollo multiplataforma con <strong>Flutter/Dart</strong> y arquitecturas de datos seguras con <strong>PostgreSQL y Row-Level Security (RLS)</strong>. Con más de 20 años de solvencia institucional y técnica en el Ministerio de Defensa y <strong>Matrícula de Honor (10)</strong> en DAW.
+          </p>
+
+          <!-- Métricas -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-val">10.0</span>
+              <span class="metric-label">Matrícula de Honor CFGS DAW</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val">8.8</span>
+              <span class="metric-label">Especialización IA & Big Data</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val">+20 Años</span>
+              <span class="metric-label">Min. de Defensa (Trayectoria)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val">C1 Alemán</span>
+              <span class="metric-label">(B2 Inglés Técnico - Sin certificar)</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="hero-actions">
+            <button type="button" class="btn-master" onclick="openOfferEmail('Diógenes Miaja', 'dmiaper@hotmail.com')">
+              <span>💼 Proponer Oferta de Empleo</span>
+            </button>
+            <a href="./CV_Diogenes_Miaja_Cosmograph.pdf" download class="btn-glass">
+              <span>📄 Descargar CV (PDF)</span>
+            </a>
+            <a href="#proyectos" class="btn-glass">
+              <span>🔬 Ver Proyectos</span>
+            </a>
+          </div>
+
+          <!-- Callout -->
+          <div class="hiring-callout-strip">
+            <span class="status-dot-green"></span>
+            <span><strong>Incorporación Inmediata:</strong> 100% Remoto, Híbrido o Presencial (Badajoz y Cáceres).</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Hero Lateral -->
+        <div class="hero-card-side glass-panel">
+          <div class="top-light-line"></div>
+          
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <img src="assets/perfil_dio.png" alt="Foto de Diógenes Miaja Pérez" class="profile-photo-img" loading="eager">
+            </div>
+          </div>
+
+          <h2 class="hero-side-name">Diógenes Miaja Pérez</h2>
+          <p class="hero-side-role">Senior Backend, AI & Mobile Specialist</p>
+          
+          <div class="hero-side-tags">
+            <span class="tag-pill">Python / FastAPI</span>
+            <span class="tag-pill">Flutter / Dart</span>
+            <span class="tag-pill">PostgreSQL / RLS</span>
+            <span class="tag-pill">Google Gemini AI</span>
+            <span class="tag-pill">Docker & Linux</span>
+            <span class="tag-pill">INCIBE Ciberseguridad</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNER DE CONTRATACIÓN INDIVIDUAL DESTACADO -->
+    <section class="container">
+      <div class="hiring-box glass-panel">
+        <div class="top-light-line"></div>
+        <div class="hiring-box-layout">
+          <div>
+            <span class="badge-pill" style="margin-bottom: 10px;">💼 Oportunidades Laborales</span>
+            <h3 class="hiring-box-title">¿Buscas un perfil senior resolutivo para tu equipo técnico?</h3>
+            <p class="hiring-box-desc">
+              Estoy disponible para contratación individual inmediata en puestos de: <strong>Ingeniero Backend (Python/FastAPI)</strong>, <strong>Desarrollador Mobile (Flutter/Dart)</strong>, <strong>Especialista en Inteligencia Artificial Generativa & LLMs</strong> o <strong>Arquitecto de Bases de Datos con Políticas RLS</strong>. Aporto alta autonomía, rigor militar en plazos y código limpio.
+            </p>
+            <div class="hiring-chips">
+              <span class="chip">📍 Remoto / Híbrido / Presencial</span>
+              <span class="chip">⚡ Incorporación Inmediata</span>
+              <span class="chip">🌐 C1 Alemán · B2 Inglés Técnico</span>
+              <span class="chip">🛡️ Seguridad IT INCIBE / Univ. Vigo</span>
+            </div>
+          </div>
+          <div class="hiring-box-actions">
+            <button type="button" class="btn-master btn-block" onclick="openOfferEmail('Diógenes Miaja', 'dmiaper@hotmail.com')">
+              <span>💼 Proponer Oferta de Empleo</span>
+            </button>
+            <a href="./CV_Diogenes_Miaja_Cosmograph.pdf" download class="btn-glass btn-block">
+              <span>📄 Descargar CV (PDF A4)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS CON DESGLOSE DE AUTORÍA -->
+    <section class="section-block" id="proyectos">
+      <div class="container">
+        
+        <div class="section-head">
+          <span class="badge-pill">🛠️ Portafolio de Ingeniería</span>
+          <h2 class="section-title">Proyectos de Software & Contribución Técnica</h2>
+          <p class="section-sub">
+            Detalle pormenorizado de los proyectos en los que he trabajado y la autoría de cada componente arquitectónico.
+          </p>
+        </div>
+
+        <!-- PROYECTO 1: COSMOGRAPH ENGINE (COLABORATIVO - TFG 9.5) -->
+        <article class="project-card glass-panel" id="cosmograph">
+          <div class="top-light-line"></div>
+
+          <div class="project-topline">
+            <div>
+              <span class="badge-pill" style="margin-bottom: 8px;">TFG Común · Calificación: 9.5 / 10</span>
+              <h3 class="project-title text-amber">Cosmograph Engine — Plataforma TTRPG Multiplataforma</h3>
+            </div>
+            <span class="project-role-badge">Rol: Creator Hub, Orquestación IA & Arquitectura SOLID</span>
+          </div>
+
+          <p class="project-summary">
+            Plataforma integral para juegos de rol tácticos en mesa (TTRPG) que combina sincronización en tiempo real, gestión de fichas, tiradas de dados 3D y aislamiento riguroso de campañas mediante políticas Row-Level Security.
+          </p>
+
+          <!-- DESGLOSE ESPECÍFICO DE QUÉ HIZO DIÓGENES -->
+          <div class="contribution-breakdown">
+            <h4 class="contribution-title">
+              <span>⚙️</span>
+              <span>Desglose de Contribución: ¿En qué trabajó Diógenes específicamente?</span>
+            </h4>
+            
+            <ul class="contribution-list">
+              <li>
+                <strong>Arquitectura del Creator Hub & Lógica de Mundos:</strong>
+                Modelado integral de los flujos de creación guiada (Wizards) en Flutter, permitiendo la parametrización de atributos, leyes universales, demografía y diplomacia de facciones.
+              </li>
+              <li>
+                <strong>Orquestación de Inteligencia Artificial (Oráculo):</strong>
+                Integración asíncrona con la API de Google Gemini para la generación procedural de lore, y procesamiento transitorio en memoria RAM de manuales PDF mediante Syncfusion PDF para evitar fugas de memoria (memory leaks).
+              </li>
+              <li>
+                <strong>Generación de Dirección Artística Visual:</strong>
+                Implementación de prompts parametrizados y conexión asíncrona con el servicio de Pollinations.ai para renderizar la atmósfera y paleta cromática de la campaña bajo demanda.
+              </li>
+              <li>
+                <strong>Desacoplamiento Estructural (SOLID):</strong>
+                Aplicación de los principios de Responsabilidad Única (SRP) e Inversión de Dependencias para aislar el "Grimorio del Universo" en la capa de UI, garantizando consultas seguras tanto para jugadores como para másteres.
+              </li>
+            </ul>
+
+            <div class="collaborator-note">
+              <span>🤝</span>
+              <span>
+                <strong>Colaboración del Proyecto:</strong> Desarrollado en conjunto con <strong>Pablo Cháfer</strong>, quien estuvo a cargo del desarrollo del cliente multiplataforma Flutter enfocado en el Hero Hub, la gestión de fichas de personajes persistentes y la interfaz interactiva de combate táctico.
+              </span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <span class="chip">Flutter & Dart</span>
+            <span class="chip">Creator Hub (Wizards)</span>
+            <span class="chip">Google Gemini AI</span>
+            <span class="chip">Syncfusion PDF</span>
+            <span class="chip">Pollinations.ai</span>
+            <span class="chip">Arquitectura SOLID (SRP / DIP)</span>
+            <span class="chip">Grimorio del Universo</span>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: NEURODECK (AUTORÍA INDIVIDUAL DE DIÓGENES) -->
+        <article class="project-card glass-panel" id="neurodeck">
+          <div class="top-light-line"></div>
+
+          <div class="project-topline">
+            <div>
+              <span class="badge-pill" style="margin-bottom: 8px;">Proyecto Estrella Individual · 100% Autoría de Diógenes</span>
+              <h3 class="project-title text-amber">NeuroDeck — Plataforma de Estudio Inteligente con Algoritmo SRS & IA</h3>
+            </div>
+            <span class="project-role-badge">Arquitectura Completa · Frontend, Backend & IA</span>
+          </div>
+
+          <p class="project-summary">
+            Plataforma multiplataforma de estudio y retención del conocimiento diseñada bajo estética cyberpunk. Modela el olvido de la memoria mediante un algoritmo propio de deterioro sináptico (SRS) y cuenta con un tutor asistido por IA contextual mediante Google Gemini API.
+          </p>
+
+          <!-- DESGLOSE ESPECÍFICO DE NEURODECK -->
+          <div class="contribution-breakdown">
+            <h4 class="contribution-title">
+              <span>🧠</span>
+              <span>Hitos Técnicos Desarrollados por Diógenes:</span>
+            </h4>
+            
+            <ul class="contribution-list">
+              <li>
+                <strong>Algoritmo de Deterioro Sináptico (SRS):</strong>
+                Modelo matemático con 4 escalones progresivos (1, 3, 7 y 21 días) que ajusta la fecha del próximo repaso y la barra de salud del conocimiento en función del acierto o fatiga.
+              </li>
+              <li>
+                <strong>Chat Neural con Google Gemini API:</strong>
+                Implementación de un tutor de IA contextual con prompt engineering defensivo que acota las explicaciones estrictamente al temario cargado, evitando alucinaciones.
+              </li>
+              <li>
+                <strong>Persistencia Offline-First & SQLite:</strong>
+                Uso de <code style="color: var(--master-gold);">sqflite</code> y <code style="color: var(--master-gold);">sqflite_common_ffi</code> con soporte de migraciones de base de datos desde la v1 hasta la v4 y exportación/importación de paquetes <code style="color: var(--master-gold);">.ndk</code>.
+              </li>
+              <li>
+                <strong>Accesibilidad por Voz & Biometría:</strong>
+                Lectura por Text-to-Speech (<code style="color: var(--master-gold);">flutter_tts</code>) con gestión de interrupciones, selección de fragmentos y autenticación biométrica nativa (<code style="color: var(--master-gold);">local_auth</code>).
+              </li>
+            </ul>
+          </div>
+
+          <!-- DEMO INTERACTIVA DEL ALGORITMO SRS -->
+          <div class="srs-demo-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+              <strong style="font-size: 0.95rem; color: var(--master-gold);">🔬 Demostración en Vivo del Algoritmo SRS NeuroDeck:</strong>
+              <span style="font-size: 0.76rem; color: var(--text-subtle);">Simula la retención de una tarjeta de memoria</span>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+              Tarjeta evaluada: <em>"¿Qué ventaja aporta implementar Row-Level Security (RLS) en la base de datos?"</em>
+            </p>
+
+            <div class="srs-controls">
+              <button class="btn-srs fail" id="srsFail">❌ Fallo (Olvido)</button>
+              <button class="btn-srs hard" id="srsHard">⚠️ Difícil</button>
+              <button class="btn-srs success" id="srsSuccess">✅ Acierto (Consolidado)</button>
+              <button class="btn-srs master" id="srsMaster">🔥 Dominio Perfecto</button>
+            </div>
+
+            <div class="srs-metrics-row">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Salud del Enlace:</span>
+                <div class="health-track">
+                  <div class="health-fill" id="srsHealthBar"></div>
+                </div>
+                <span id="srsHealthVal" style="font-size: 0.82rem; font-weight: 700; color: #10B981;">85% (Consolidado)</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">
+                Intervalo: <strong id="srsIntervalVal" style="color: var(--master-gold);">Revisión en 7 días (Escalón 3)</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3: ERP INTERNO & AUTOMATIZACIÓN MINISDEF -->
+        <article class="project-card glass-panel">
+          <div class="top-light-line"></div>
+
+          <div class="project-topline">
+            <div>
+              <span class="badge-pill" style="margin-bottom: 8px;">Infraestructura Crítica · Min. de Defensa</span>
+              <h3 class="project-title text-amber">Sistema ERP Interno & Digitalización de Procesos</h3>
+            </div>
+            <span class="project-role-badge">Desarrollo de Software & Arquitectura</span>
+          </div>
+
+          <p class="project-summary">
+            Diseño e implementación de un sistema de gestión empresarial interno (ERP) para la automatización de procesos de mantenimiento, seguimiento de auditorías técnicas y trazabilidad integral de contratos de infraestructuras críticas.
+          </p>
+
+          <div class="contribution-breakdown">
+            <h4 class="contribution-title"><span>🛡️</span><span>Impacto Operativo:</span></h4>
+            <ul class="contribution-list">
+              <li>
+                <strong>Automatización de Cuellos de Botella:</strong> Eliminación de tareas manuales y unificación de registros técnicos entre distintas unidades.
+              </li>
+              <li>
+                <strong>Auditorías Técnicas & Supervisión:</strong> Redacción de planes de mantenimiento preventivo y control de calidad contractual.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TRAYECTORIA Y FORMACIÓN (DOS COLUMNAS) -->
+    <section class="section-block" id="trayectoria">
+      <div class="container two-cols">
+        
+        <!-- EXPERIENCIA LABORAL -->
+        <div class="timeline-card glass-panel">
+          <div class="top-light-line"></div>
+          <h3 class="timeline-heading">💼 Experiencia Laboral</h3>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="tl-role">Gestor Técnico de Infraestructuras y Desarrollador de Software Interno</div>
+            <div class="tl-sub">Ministerio de Defensa (España) | 2009 - 2026</div>
+            <div class="tl-desc">
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
+                <li>▸ <strong>Desarrollo de Software y ERP:</strong> Creación de herramientas tecnológicas para automatizar flujos operativos y seguimiento de mantenimiento.</li>
+                <li>▸ <strong>Gestión y Auditorías Técnicas (2010 - Actualidad):</strong> Supervisión de pliegos técnicos, control de calidad y auditoría de contratos.</li>
+                <li>▸ <strong>Precisión Táctica y Logística (2003 - 2010):</strong> Unidades tácticas de topografía, cálculo y precisión documental.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMACIÓN Y CERTIFICACIONES -->
+        <div class="timeline-card glass-panel">
+          <div class="top-light-line"></div>
+          <h3 class="timeline-heading">🎓 Formación & Certificaciones</h3>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="tl-role">CFGS Desarrollo de Aplicaciones Web (DAW)</div>
+            <div class="tl-sub">Matrícula de Honor (10.0) · Máxima Calificación</div>
+            <div class="tl-desc">Especialización en desarrollo backend, arquitecturas de servicios web y bases de datos relacionales.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="tl-role">Curso de Especialización en IA y Big Data</div>
+            <div class="tl-sub">Nota Media: 8.8</div>
+            <div class="tl-desc">Deep Learning, LLMs, NLP, modelos generativos y procesamiento masivo de datos.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="tl-role">CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)</div>
+            <div class="tl-sub">Nota Media: 7.59</div>
+            <div class="tl-desc">Desarrollo móvil, desktop y persistencia en cliente.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="tl-role">Consultor de Riesgos IT y Ciberseguridad</div>
+            <div class="tl-sub">Certificación Oficial · Universidad de Vigo</div>
+            <div class="tl-desc">Análisis de vulnerabilidades, compliance y mitigación de amenazas informáticas.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="tl-role">Cybersecurity Summer Bootcamp</div>
+            <div class="tl-sub">INCIBE (Instituto Nacional de Ciberseguridad)</div>
+            <div class="tl-desc">Buenas prácticas de seguridad informática y defensa en entornos corporativos.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STACK TECNOLÓGICO -->
+    <section class="section-block" id="stack">
+      <div class="container">
+        
+        <div class="section-head">
+          <span class="badge-pill">⚡ Tecnologías</span>
+          <h2 class="section-title">Stack Técnico Principal</h2>
+        </div>
+
+        <div class="glass-panel" style="padding: 30px;">
+          <div class="top-light-line"></div>
+          <div class="stack-grid">
+            <span class="skill-chip">Python (FastAPI, POO, Asyncio)</span>
+            <span class="skill-chip">Flutter & Dart</span>
+            <span class="skill-chip">PostgreSQL & PL/pgSQL</span>
+            <span class="skill-chip">Supabase BaaS</span>
+            <span class="skill-chip">Row-Level Security (RLS)</span>
+            <span class="skill-chip">Google Gemini AI & LLMs</span>
+            <span class="skill-chip">SQLite & Sqflite FFI</span>
+            <span class="skill-chip">Docker & Contenedores</span>
+            <span class="skill-chip">Git & GitHub</span>
+            <span class="skill-chip">Pytest & Postman QA</span>
+            <span class="skill-chip">Linux & Bash Scripting</span>
+            <span class="skill-chip">Arquitectura Clean Code</span>
+            <span class="skill-chip">Alemán (C1)</span>
+            <span class="skill-chip">Inglés Técnico (B2) - Sin Certificar</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO Y DESCARGA DE CV -->
+    <section class="section-block" id="contacto">
+      <div class="container">
+        
+        <div class="contact-hero-card glass-panel">
+          <div class="top-light-line"></div>
+          <span class="badge-pill" style="margin-bottom: 12px;">📬 Contacto Directo</span>
+          <h3 class="text-amber">Iniciemos una Conversación</h3>
+          <p>
+            ¿Tienes una vacante técnica, un proyecto backend/mobile o buscas un perfil resolutivo para tu equipo? Estoy disponible para incorporación inmediata.
+          </p>
+
+          <div class="contact-actions">
+            <button type="button" class="btn-master" onclick="openOfferEmail('Diógenes Miaja', 'dmiaper@hotmail.com')">
+              <span>💼 Proponer Oferta de Empleo</span>
+            </button>
+            <a href="./CV_Diogenes_Miaja_Cosmograph.pdf" download class="btn-glass">
+              <span>📥 Descargar CV Cosmograph (PDF)</span>
+            </a>
+            <a href="./cv.html" target="_blank" class="btn-glass">
+              <span>👁️ Ver Versión para Imprimir (Blanco)</span>
+            </a>
+          </div>
+
+          <div class="contact-links-row">
+            <span class="contact-pill-link">📍 Badajoz, España (Disponible para remoto y traslados)</span>
+            <a href="https://linkedin.com/in/diogenes-miaja-perez" target="_blank" rel="noopener" class="contact-pill-link">💼 linkedin.com/in/diogenes-miaja-perez</a>
+            <a href="https://github.com/dmiaper" target="_blank" rel="noopener" class="contact-pill-link">🐙 github.com/dmiaper</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div>
+        <strong>Diógenes Miaja Pérez</strong> · Ingeniero de Software
+      </div>
+      <div>
+        Diseñado bajo la estética de Cosmograph · HTML5, Vanilla CSS & JS
+      </div>
+      <div>
+        <a href="#hero" style="color: var(--master-gold); text-decoration: none;">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
