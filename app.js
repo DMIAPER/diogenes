@@ -95,19 +95,7 @@ Atentamente,
 
   const mailtoUrl = `mailto:${candidateEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-  // Intenta abrir el cliente predeterminado de correo del usuario (Outlook, Mail, etc.)
-  try {
-    const tempLink = document.createElement('a');
-    tempLink.href = mailtoUrl;
-    tempLink.style.display = 'none';
-    document.body.appendChild(tempLink);
-    tempLink.click();
-    setTimeout(() => tempLink.remove(), 500);
-  } catch (err) {
-    window.location.href = mailtoUrl;
-  }
-
-  // Muestra modal con alternativas de correo web (Gmail, Outlook Web) y copia rápida
+  // Muestra modal con alternativas de correo (Gestor predeterminado, Gmail, Outlook Web, Copiar)
   showOfferEmailModal(candidateName, candidateEmail, subject, body, mailtoUrl);
 }
 
@@ -134,7 +122,7 @@ function showOfferEmailModal(name, email, subject, body, mailtoUrl) {
       <div class="email-modal-header">
         <span class="badge-pill">💼 Proponer Oferta de Empleo</span>
         <h3>Enviar Propuesta a ${name}</h3>
-        <p>Se ha iniciado la apertura en tu aplicación de correo. Si utilizas correo web o prefieres redactar desde tu navegador con tu propia cuenta, elige una opción:</p>
+        <p>Selecciona cómo prefieres redactar y enviar tu propuesta de empleo:</p>
       </div>
 
       <div class="email-modal-buttons">
