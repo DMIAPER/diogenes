@@ -114,10 +114,11 @@ function showOfferEmailModal(name, email, subject, body, mailtoUrl) {
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+  // 1. Render el modal primero
   modal.innerHTML = `
     <div class="email-modal-card glass-panel">
       <div class="top-light-line"></div>
-      <button class="email-modal-close" onclick="closeOfferEmailModal()" aria-label="Cerrar">&times;</button>
+      <button class="email-modal-close" id="btnCloseOfferModal" aria-label="Cerrar">&times;</button>
       
       <div class="email-modal-header">
         <span class="badge-pill">💼 Proponer Oferta de Empleo</span>
@@ -126,29 +127,29 @@ function showOfferEmailModal(name, email, subject, body, mailtoUrl) {
       </div>
 
       <div class="email-modal-buttons">
-        <a href="${mailtoUrl}" class="btn-email-option" onclick="closeOfferEmailModal()">
+        <button type="button" class="btn-email-option" id="btnMailtoOffer">
           <span class="btn-icon">💻</span>
           <div class="btn-text">
             <strong>Abrir en mi Gestor de Correo</strong>
             <small>Outlook de escritorio, Thunderbird, Apple Mail, Mail de Windows</small>
           </div>
-        </a>
+        </button>
 
-        <a href="${gmailUrl}" target="_blank" rel="noopener" class="btn-email-option" onclick="closeOfferEmailModal()">
+        <button type="button" class="btn-email-option" id="btnGmailOffer">
           <span class="btn-icon">🔴</span>
           <div class="btn-text">
             <strong>Redactar en Gmail Web</strong>
             <small>Abre tu Gmail en el navegador con la oferta ya preparada</small>
           </div>
-        </a>
+        </button>
 
-        <a href="${outlookUrl}" target="_blank" rel="noopener" class="btn-email-option" onclick="closeOfferEmailModal()">
+        <button type="button" class="btn-email-option" id="btnOutlookOffer">
           <span class="btn-icon">🔵</span>
           <div class="btn-text">
             <strong>Redactar en Outlook / Hotmail Web</strong>
             <small>Abre tu Outlook.com / Microsoft 365 en el navegador</small>
           </div>
-        </a>
+        </button>
 
         <button type="button" class="btn-email-option" id="btnCopyOffer">
           <span class="btn-icon">📋</span>
@@ -165,6 +166,27 @@ function showOfferEmailModal(name, email, subject, body, mailtoUrl) {
     </div>
   `;
 
+  // 2. Mostrar modal
+  modal.classList.add('active');
+
+  // 3. Conectar eventos DESPUÉS de que el DOM esté listo
+  document.getElementById('btnCloseOfferModal').addEventListener('click', closeOfferEmailModal);
+
+  document.getElementById('btnMailtoOffer').addEventListener('click', () => {
+    closeOfferEmailModal();
+    window.location.href = mailtoUrl;
+  });
+
+  document.getElementById('btnGmailOffer').addEventListener('click', () => {
+    closeOfferEmailModal();
+    window.open(gmailUrl, '_blank', 'noopener');
+  });
+
+  document.getElementById('btnOutlookOffer').addEventListener('click', () => {
+    closeOfferEmailModal();
+    window.open(outlookUrl, '_blank', 'noopener');
+  });
+
   document.getElementById('btnCopyOffer').addEventListener('click', () => {
     const fullText = `Destinatario: ${email}\nAsunto: ${subject}\n\n${body}`;
     navigator.clipboard.writeText(fullText).then(() => {
@@ -173,8 +195,6 @@ function showOfferEmailModal(name, email, subject, body, mailtoUrl) {
       showToast('Correo: ' + email);
     });
   });
-
-  modal.classList.add('active');
 }
 
 function closeOfferEmailModal() {
