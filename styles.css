@@ -36,6 +36,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -1011,3 +1012,112 @@ h1, h2, h3, h4, .brand-title {
   color: #FDE68A;
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
 }
+
+/* ==========================================================================
+   ESTILOS GLOBALES PARA DESPLEGABLES (SELECTS, OPTIONS, ACCORDIONS, DROPDOWNS)
+   ========================================================================== */
+
+select,
+option,
+optgroup {
+  background-color: #15151A !important;
+  color: #F8FAFC !important;
+  color-scheme: dark;
+}
+
+select {
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: #15151A;
+  color: #F8FAFC;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+select:focus,
+select:hover {
+  border-color: var(--master-gold);
+  box-shadow: 0 0 0 2px var(--master-glow);
+}
+
+option {
+  padding: 10px 12px;
+  background-color: #15151A;
+  color: #F8FAFC;
+}
+
+option:checked,
+option:hover {
+  background-color: #242430 !important;
+  color: var(--master-gold) !important;
+}
+
+/* Desplegables colapsables (details / summary) */
+details {
+  background: rgba(21, 21, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+details[open] {
+  background: rgba(28, 28, 36, 0.95);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #F8FAFC;
+  outline: none;
+  user-select: none;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:hover {
+  color: var(--master-gold);
+}
+
+/* Menús desplegables y popovers personalizados */
+.dropdown-menu,
+.dropdown-content,
+.custom-dropdown,
+[role="menu"],
+[role="listbox"] {
+  background: #15151A !important;
+  background-color: rgba(21, 21, 26, 0.98) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  color: var(--text-main) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dropdown-item,
+[role="menuitem"],
+[role="option"] {
+  color: #F8FAFC !important;
+  background: transparent;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+[role="menuitem"]:hover,
+[role="option"]:hover {
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: #FCD34D !important;
+}
+
